@@ -22,7 +22,7 @@ public class Day2Practice {
         T maxItem = findMostCommonInList(items);
         return IntStream.range(0,items.size())
                 .filter((index) -> {
-                    if(index == 0 || items.get(index) == maxItem) {
+                    if(index == 0 || items.get(index).equals(maxItem)) {
                         return true;
                     }
                     return items.get(index - 1) != maxItem;
